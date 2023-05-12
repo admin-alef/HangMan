@@ -24,15 +24,15 @@ class HangMan():
 
             if guess in letters1:
                 ''' [2] Comment following 3 lines and Uncomment lines 35,36,37,38 '''
-                letters1.remove(guess)
-                index = word.find(guess)
-                display = display[:index] + guess + display[index + 1:]
+                #letters1.remove(guess)
+                #index = word.find(guess)
+                #display = display[:index] + guess + display[index + 1:]
 
                 ''' [2] Solving problem with multiple letters '''
-                # for pos,let in enumerate(letters2):
-                #     if(let == guess):
-                #         display = display[:pos] + guess + display[pos + 1:]
-                #         letters1.remove(guess)
+                for pos,let in enumerate(letters2):
+                    if(let == guess):
+                        display = display[:pos] + guess + display[pos + 1:]
+                        letters1.remove(guess)
 
             else:
                 guessed.append(guess)
